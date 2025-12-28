@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript - Basic</h1>
+    Open the console to see the output!
+    <script>
+        console.assert("Hello, World!");
+
+        const nilai = [90, 80, 85, 70, 95];
+        let kkm = 75;
+        let lulus = nilai.filter(n => n >= kkm);
+
+        for (i=0; i<lulus.length; i++) {
+            if (nilai[i] >= kkm) {
+                console.log(`Nilai ${nilai[i]} = Lulus`);
+            } 
+            else {
+                console.log(`Nilai ${nilai[i]} = Tidak Lulus`);
+            }
+        }
+
+        function hitungLuas(panjang, lebar) {
+            let luas = panjang * lebar;
+            return luas;
+        }
+        function sapa() {
+            let nama = prompt("Masukkan nama Anda: ");
+            console.log(`Halo, ${nama}! kamu umur ${umur}! Selamat datang di halaman ini.`);
+        }
+
+        console.log(hitungLuas(5, 10));
+        console.log(sapa(MiawAug));
+
+        const mahasiswa = {
+            nama: "Deku",
+            umur: 21,
+            jurusan: "Informatika",
+            perkenalan: function() {
+                console.log(`Halo, nama saya ${this.nama}, saya berumur ${this.umur} tahun, dan saya kuliah di jurusan ${this.jurusan}.`);
+            }
+        };
+
+        const name = mahasiswa.nama;
+        console.log(name);
+
+        const { nama, umur, ip } = mahasiswa
+        let ket = (ip == 4) ? "Cumlaude" : "Tidak Cumlaude";
+        console.log('halo aku ${nama}, umurku ${umur}, ipk ku ${ip}');
+
+    </script>
+</body>
+</html>
