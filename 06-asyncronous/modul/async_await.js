@@ -12,8 +12,18 @@ function masakMie(rasa) {
     });
 }
 
+// ASYNC AWAIT FUNCTION
+async function hidangkan() {
+    try {
+        const mie = await masakMie("Ayam Bawang");
+        console.log("Adik : " + mie);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 // Running Program
-console.log ("================== PROMISE =================");
+console.log ("================== ASYNC AWAIT ================");
 console.log("Kakak mencuci piring");
-masakMie("Ayam Bawang").then((mie) => {console.log("Adik : " + mie)})
+hidangkan();
 console.log("Kakak : Pirig dah selesai");

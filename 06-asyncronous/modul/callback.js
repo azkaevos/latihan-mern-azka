@@ -12,6 +12,7 @@ function hidangkanMie(mie) {
 }
 
 // Running Program
+console.log ("================== CALLBACK =================");
 console.log("Kakak mencuci piring");
 masakMie("Ayam Bawang", hidangkanMie)
 console.log("Kakak : Piring udah beres");
