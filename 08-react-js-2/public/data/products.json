@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Counter-Strike 2",
+    "price": "Gratis",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/730/library_hero.jpg"
+  },
+  {
+    "id": "2",
+    "title": "PUBG: Battlegrounds",
+    "price": "Gratis",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/library_hero.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Baldur's Gate 3",
+    "price": "Rp 1.010.500",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1086940/library_hero.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Rust",
+    "price": "± Rp 450.000",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/252490/library_hero.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Grand Theft Auto V",
+    "price": "± Rp 380.000",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/271590/library_hero.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Dead by Daylight",
+    "price": "± Rp 160.000",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/381210/library_hero.jpg"
+  },
+  {
+    "id": "7",
+    "title": "NBA 2K26",
+    "price": "± Rp 900.000",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/3472040/library_hero.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Cyberpunk 2077",
+    "price": "± Rp 490.000",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/library_hero.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Warhammer 40,000: Space Marine 2",
+    "price": "± Rp 550.000",
+    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2183900/library_hero.jpg"
+  },
+  {
+    "id": "10",
+    "title": "ARC Raiders",
+    "price": "± Rp 300.000",
+    "thumbnail": "https://4kwallpapers.com/images/walls/thumbs/23576.jpg"
+  }
+]

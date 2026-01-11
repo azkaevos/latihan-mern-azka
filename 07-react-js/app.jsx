@@ -15,11 +15,12 @@ function App() {
           <div className="container-fluid">
             <a className="navbar-brand text-primary" href="#">Learning React</a>
           </div>
-         </nav>
-         <div className="container">
+        </nav>
+        <div className="container">
             <TombolCounter />
-            <div className="row mt-4"></div>
-                <div className="col-6 col-xl-3">
+            <hr />
+            <div className="row mt-4">
+                <div className="col-sm-6 col-xl-3">
                     <KartuProduk 
                         image="https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-bg-battery_1.webp"
                         nama="ROG Strix SCAR 18"
@@ -27,7 +28,7 @@ function App() {
                         harga="Rp 95.000.000" 
                     />
                 </div>
-                <div className="col-6 col-xl-3">
+                <div className="col-sm-6 col-xl-3">
                     <KartuProduk 
                         image="https://asset.msi.com/resize/image/global/product/product_17495443670cd5fa9c9035765c2b56e2e7dcd86768.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
                         nama="Stealth A16 AI+ Mercedes-AMG Motorsport A3XW; Copilot+ PC"
@@ -35,7 +36,7 @@ function App() {
                         harga="Rp 47.000.000" 
                     />
                 </div>
-                <div className="col-6 col-xl-3">
+                <div className="col-sm-6 col-xl-3">
                     <KartuProduk 
                         image="https://p3-ofp.static.pub//fes/cms/2025/02/14/wf3yter8p98sqcszv7cpz82gzp8564355404.png"
                         nama="Legion Pro 7i Gen 10"
@@ -43,13 +44,17 @@ function App() {
                         harga="Rp 63.000.000" 
                     />
                 </div>
-                <div>
+                <div className="col-sm-6 col-xl-3">
                     <h3 className="mt-4">DAFTAR TUGAS</h3>
                     <DaftarTugas tugas={tugas} />
+                    <hr />
+                    <h3 className="mt-4">Form Login - Form & Validation</h3>
+                    <FormLogin />
                 </div>
-         </div>
+            </div>
+        </div>
         </>
-    )
+    );
 }
 
 root.render(<App />);
