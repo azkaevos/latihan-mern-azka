@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "MSI Raider A18 HX Pro Extreme",
+    "price": "Rp 165.800.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/81nXo6uJwYL._AC_SL1500_.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Lenovo Legion Pro 7i Gen 9",
+    "price": "Rp 88.000.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/71pZiD9oQeL._AC_SL1500_.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Lenovo Legion Pro 5",
+    "price": "Rp 39.600.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/71MzK5FntnL._AC_SL1500_.jpg"
+  },
+  {
+    "id": "4",
+    "title": "ASUS ROG Strix G16 (2025)",
+    "price": "Rp 26.200.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/61PGsG2t1hL._AC_SL1500_.jpg"
+  },
+  {
+    "id": "5",
+    "title": "ASUS ROG Strix G16 (RTX 4070)",
+    "price": "Rp 29.900.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/61PGsG2t1hL._AC_SL1500_.jpg"
+  },
+  {
+    "id": "6",
+    "title": "HP OMEN 16 Gaming Laptop",
+    "price": "Rp 21.999.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/71TZ43B7Q-L._AC_SL1500_.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Alienware x18 R2",
+    "price": "Rp 82.500.000",
+    "thumbnail": "https://cdn1.evga.com/articles/02537/images/alienware-x18-r2-header.jpg"
+  },
+  {
+    "id": "8",
+    "title": "ASUS ROG Zephyrus G16 (2025)",
+    "price": "Rp 55.999.000",
+    "thumbnail": "https://dlcdnwebimages.asus.com/gain/7133dcd4-9bee-4ce7-a735-0b2c97bbf55e/w717"
+  },
+  {
+    "id": "9",
+    "title": "MSI Titan 18 HX AI (2025)",
+    "price": "Rp 113.000.000",
+    "thumbnail": "https://cdn.mos.cms.futurecdn.net/8d8c9c17f40e1bcb0e944790abbd95a5.jpg"
+  },
+  {
+    "id": "10",
+    "title": "Acer Predator Helios Neo 16",
+    "price": "Rp 33.499.000",
+    "thumbnail": "https://m.media-amazon.com/images/I/61TVWZLa6ML._AC_SL1500_.jpg"
+  }
+]
