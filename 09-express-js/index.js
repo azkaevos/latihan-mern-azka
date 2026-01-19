@@ -1,87 +1,90 @@
-const express = require('express');
+const express = require("express");
 const fs = require("fs");
 const app = express();
 const port = 3000;
 
-//Parsing Data Ke JSON
+// Parsing data ke JSON
 app.use(express.json());
 
-//Read JSON File
+// Membaca file JSON
 function readFile() {
-    const data = fs.readFileSync('laptops.json', 'utf-8');
-    return JSON.parse(data);
+  const data = fs.readFileSync("./laptops/json", "utf-8");
+  return JSON.parse(data);
 }
 
-//Routing
-app.get('/', (req, res) => {
-    res.json({
-        message: "Welcome To My First API....👌",
-        status: "Running...🚀",
-    });
+// Route
+app.get("/", (req, res) => {
+  res.json({
+    message: "Welcome to my First API....👌",
+    status: "success 🤸‍♀️",
+  });
 });
 
-//Routing Get All Products
-app.get('/api/laptops', (req, res) => {
-    const laptops = readFile();
-    res.json(laptops);
-})
-
-//Routing Get Product By ID
-app.get('/api/laptops/:id', (req, res) => {
-    const laptops = readFile();
-    const laptop = laptops.find(p => p.id === req.params.id);
-    if (!laptop) {return res.status(404).json({ message: "Laptop not found" });}
-    res.json(laptop);
+// Route Get All Product
+app.get("/api/products", (req, res) => {
+  const products = readFile();
+  res.json(products);
 });
 
-//Add Data to JSON File
-function addLaptop(data) {
-    fs.writeFileSync('laptops.json', JSON.stringify(data, null, 2));
+// Route Get Product By Id
+app.get("/api/products/:id", (req, res) => {
+  const products = readFile();
+  const product = products.find((p) => p.id == req.params.id);
+  if (!product)
+    return res.status(404).json({ message: "Kagak ada IDNYA CUG" });
+  res.json(product);
+});
+
+// Tambah data ke json
+function addProduct(data) {
+  fs.writeFileSync("./laptops/json", JSON.stringify(data, null, 2));
 }
 
-//Routing Add New Product
-app.post('/api/laptops', (req, res) => {
-        const laptops = readFile();
-        const { title, price, thumbnail } = req.body;
+// Route Create Product
+app.post("/api/products", (req, res) => {
+  const products = readFile();
+  const { title, price, thumbnail } = req.body;
 
-        const newLaptop = {
-          id: laptops.length > 0 ? laptops[laptops.length - 1].id + 1 : 1,
-          title,
-          price,
-          thumbnail,
-        };
+  const newProduct = {
+    id: products.length > 0 ? products[products.length - 1].id + 1 : 1,
+    title,
+    price,
+    thumbnail,
+  };
 
-
-    laptops.push(newLaptop);
-    addLaptop(laptops);
-    res.status(201).json({ newLaptop, message:"Laptop Added Successfully" });
+  products.push(newProduct);
+  addProduct(products);
+  res.status(201).json(newProduct);
 });
 
-//Routing Update Product
-app.put('/api/laptops/:id', (req, res) => {
-    const laptops = readFile();
-    const laptopIndex = laptops.findIndex((l) => l.id ==req.params.id);
+// Route Update Product
+app.put("/api/products/:id", (req, res) => {
+  const products = readFile();
+  const { title, price, thumbnail } = req.body;
+  const product = products.findIndex((p) => p.id == req.params.id);
 
-    if (laptopIndex === -1) { return res.status(404).json({ message: "Laptop not found" }); }
-    
-    laptops[laptopIndex] = { ...laptops[laptopIndex], title, price, thumbnail };
-    addLaptop(laptops);
-    res.status(200).json({ laptop: laptops[laptopIndex], message:"Laptop Updated Successfully" });
+  if (product === -1)
+    return res.status(404).json({ message: "Kagak ada IDNYA CUG" });
+
+  products[product] = { ...products[product], title, price, thumbnail };
+  addProduct(products);
+  res.status(201).json(products[product]);
 });
 
-//Routing Delete Product
-app.delete('/api/laptops/:id', (req, res) => {
-    let laptops = readFile();
-    const laptopIndex = laptops.findIndex((l) => l.id == req.params.id);
+// Route Delete Product
+app.delete("/api/products/:id", (req, res) => {
+  const products = readFile();
+  const product = products.findIndex((p) => p.id == req.params.id);
 
-    if (laptopIndex === -1) { return res.status(404).json({ message: "Laptop not found" }); }
+  if (product === -1)
+    return res.status(404).json({ message: "Kagak ada IDNYA CUG" });
 
-    const deletedLaptop = laptops.splice(laptopIndex, 1);
-    addLaptop(laptops);
-    res.status(200).json({ message:"Laptop Deleted Successfully" });
+  const deleted = products.splice(product, 1);
+  addProduct(products);
+  res.status(201).json({ message: "Laptop succes di hapus", deleted });
 });
 
-//Running The Server....
+// Jalankan Server
 app.listen(port, () => {
-    console.log(`Server is Running🚀 at http://localhost:${port}`);
+  console.log(`Server Dah Jalan Cuy http://localhost:${port}`);
 });

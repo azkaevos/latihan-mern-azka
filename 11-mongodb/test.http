@@ -1,0 +1,52 @@
+### Get All Movies
+GET http://localhost:3000/api/movies
+
+### Get Movie by ID
+GET http://localhost:3000/api/movies/1
+
+### Create New Movie
+POST http://localhost:3000/api/movies
+Content-Type: application/json
+
+{
+    "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+    "director": "Haruo Sotozaki",
+    "year": 2023,
+    "genre": "Action, Adventure, Dark Fantasy",
+    "trailer": "https://www.youtube.com/watch?v=VQGCKyvzIM4",
+    "banner": "https://m.media-amazon.com/images/M/MV5BOWE3ZTM3MDAtYzYxNy00ZGI3LWI3ZTUtMjk3ZGI4YTZlZWRlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_FMjpg_UX1000_.jpg"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Update Movie by ID
+PUT http://localhost:3000/api/movies/11
+Content-Type: application/json
+
+{
+    "title": "MSI Prestige 16 AI+ Mercedes-AMG Updated",
+    "price": "Rp. 32.999.000"
+    "thumbnail": "https://els.id/wp-content/uploads/2025/09/MSI-Prestige-16-AI-MercedesAMG-3-updated.png"
+}
+
+### Delete Movie by ID
+DELETE http://localhost:3000/api/movies/11
